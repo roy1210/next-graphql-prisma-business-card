@@ -1,5 +1,5 @@
-import { gql, ApolloServer } from "apollo-server-micro";
 import { PrismaClient } from "@prisma/client";
+import { ApolloServer, gql } from "apollo-server-micro";
 import { v4 as uuid4 } from "uuid";
 
 const prisma = new PrismaClient();
