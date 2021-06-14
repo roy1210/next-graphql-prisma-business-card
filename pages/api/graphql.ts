@@ -47,9 +47,9 @@ const resolvers = {
     },
     // Memo: first arg -> parent
     getCard: async (_, args) => {
-      const card = await prisma.card.findUnique({
+      const card = await prisma.card.findFirst({
         where: {
-          id: Number(args.id),
+          cardId: args.id,
         },
       });
       return card;
